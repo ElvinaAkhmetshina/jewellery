@@ -1,0 +1,9 @@
+﻿@model jewellery.Data.Models.Jewelry
+
+<div class="col-lg-3">
+     <h2>Модель: @Model.name</h2>
+            <p>Цена: @Model.price.ToString("c")</p>
+           <img class="img-thumbnail" src="@Model.img" alt="@Model.name" />
+           
+            <p><a class="btn btn-warning" asp-controller="ShopCart" asp-action="addToCart" asp-route-id="@Model.id">Добавить в корзину</a></p>
+</div>

@@ -1,0 +1,5 @@
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=(localdb)\\MSSQLLocalDB;Database=Jewellry;Trusted_Connection=True;MultipleActiveResultSets=true"
+  }
+}

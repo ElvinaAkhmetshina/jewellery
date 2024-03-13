@@ -1,0 +1,12 @@
+﻿@using jewellery.Data.Models
+
+<h1>Все украшения</h1>
+ <h3>@Model.currCategory</h3>
+    <div class="row mt-2 mb-4">
+    @{
+        foreach(Jewelry jewelry in Model.allJewelry)
+        {
+        @Html.Partial("AllJewelry", jewelry)
+        }
+    }
+    </div>
