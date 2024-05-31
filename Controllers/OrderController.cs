@@ -32,7 +32,7 @@ namespace jewellery.Controllers
         public IActionResult Checkout(Order order)
         {
             shopCart.listShopItems = shopCart.getShopItems();
-            //////valid
+           
             if (shopCart.listShopItems.Count == 0)
             {
                 ModelState.AddModelError("", "У вас должны быть товары для заказа!");
@@ -41,10 +41,7 @@ namespace jewellery.Controllers
             
             allOrders.CreateOrder(order);
             return RedirectToAction("Complete");
-            //else
-            //{
-            //    return View(order);
-            //}
+          
 
         }
 

@@ -16,26 +16,10 @@ namespace jewellery.Data.Repository
 
         public void CreateOrder(Order order)
         {
-            //order.orderTime = DateTime.Now;
-            //appDBContent.Order.Add(order);
-
-
-            //var items = shopCart.listShopItems;
-            //foreach (var el in items)
-            //{
-            //    var orderDetail = new OrderDetail()
-            //    {
-            //        carId = el.car.id,
-            //        orderId = order.id,
-            //        price = el.car.price
-            //    };
-            //    appDBContent.OrderDetail.Add(orderDetail);
-
-            //}
-            //appDBContent.SaveChanges();
+           
             order.orderTime = DateTime.Now;
             appDBContent.Order.Add(order);
-            //Нужно добавить сохранение в базу иначе выбивает ошибку и не сохраняет
+           
             appDBContent.SaveChanges();
             var items = shopCart.listShopItems;
 

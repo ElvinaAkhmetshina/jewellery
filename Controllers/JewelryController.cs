@@ -39,7 +39,7 @@ namespace jewellery.Controllers
             IEnumerable<Jewelry> jewelries = null;
 
             string currCategory = "";
-            //значит мы выводим все автомобили, без категории
+           
             if (string.IsNullOrEmpty(category))
             {
                 jewelries = _allJewelry.jewelries.OrderBy(i => i.id);
@@ -63,7 +63,6 @@ namespace jewellery.Controllers
 
 
 
-            //создаем объект , олл карс значение карс и задаем категорию
             var jewlryObj = new JewelryListViewModel
             {
                 allJewelry = jewelries,
@@ -75,7 +74,6 @@ namespace jewellery.Controllers
 
 
 
-            //возвращаем страницу штмл
             return View(jewlryObj);
         }
     }
